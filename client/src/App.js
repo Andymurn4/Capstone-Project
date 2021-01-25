@@ -1,7 +1,10 @@
+
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "semantic-ui-css/semantic.min.css";
 import "./App.css";
+
+
 
 import { Container } from "semantic-ui-react";
 import Navbar from "./components/Navbar";
@@ -14,6 +17,7 @@ import Product from "./pages/Product";
 
 function App() {
   return (
+
     <Router>
       <Navbar />
       <Container>
