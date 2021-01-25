@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "semantic-ui-css/semantic.min.css";
 import "./App.css";
 
+import { Container } from "semantic-ui-react";
 import Navbar from "./components/Navbar";
 
 import Home from "./pages/Home";
@@ -15,11 +16,13 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Route exact path="/" component={Home} />
-      <Route exact path="/cart" component={Cart} />
-      <Route exact path="/login" component={Login} />
-      <Route exact path="/register" component={Register} />
-      <Route exact path="/products/:productId" component={Product} />
+      <Container>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/cart" component={Cart} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
+        <Route exact path="/products/:productId" component={Product} />
+      </Container>
     </Router>
   );
 }
