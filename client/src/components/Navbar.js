@@ -38,3 +38,41 @@ function Navbar() {
 }
 
 export default Navbar;
+
+// NAVBAR FOR WHEN LOGGED IN
+/*
+<Menu pointing size="massive">
+      <Menu.Item
+        name="username"
+        active={activeItem === "username"}
+        onClick={handleItemClick}
+        as={Link}
+        to="/"
+      />
+
+      <Menu.Menu position="right">   
+        <Menu.Item
+          name="cart"
+          active={activeItem === "cart"}
+          onClick={handleItemClick}
+          as={Link}
+          to="/cart"
+        />
+         <Menu.Item
+          name="listing"
+          active={activeItem === "listing"}
+          onClick={handleItemClick}
+          as={Link}
+          to="/listing"
+        />
+        <Menu.Item
+          name="logout"
+          active={activeItem === "logout"}
+          onClick={logout}
+        />
+      </Menu.Menu>
+    </Menu>
+
+
+
+*/
