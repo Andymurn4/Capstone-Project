@@ -1,9 +1,10 @@
 import React from "react";
 import { Card, Image } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 function ProductCard() {
   return (
-    <Card fluid>
+    <Card fluid as={Link} to="/products/">
       <Image src="http://placekitten.com/300/300" />
       <Card.Content>
         <Card.Header>Product Name</Card.Header>
