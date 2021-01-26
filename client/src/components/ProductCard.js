@@ -6,7 +6,7 @@ function ProductCard({
   product: { _id, name, imgURL, desc, price, stockAmt },
 }) {
   return (
-    <Card fluid as={Link} to="/products/">
+    <Card fluid as={Link} to={`/product/${_id}`}>
       <Image className="product-img" src={imgURL} />
       <Card.Content>
         <Card.Header title={name}>{name.slice(0, 70)}...</Card.Header>

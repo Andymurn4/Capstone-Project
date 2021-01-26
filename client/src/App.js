@@ -22,7 +22,7 @@ function App() {
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
-        <Route exact path="/products/" component={Product} />
+        <Route exact path="/product/:id" component={Product} />
         <Route exact path="/listing/" component={PostListing} />
       </Container>
     </Router>
