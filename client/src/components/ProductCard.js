@@ -2,16 +2,18 @@ import React from "react";
 import { Card, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
-function ProductCard() {
+function ProductCard({
+  product: { _id, name, imgURL, desc, price, stockAmt },
+}) {
   return (
     <Card fluid as={Link} to="/products/">
-      <Image src="http://placekitten.com/300/300" />
+      <Image className="product-img" src={imgURL} />
       <Card.Content>
-        <Card.Header>Product Name</Card.Header>
-        <Card.Meta>price</Card.Meta>
-        <Card.Description>
-          short description blah blah blah blah item blah sale blah buy it blah
-        </Card.Description>
+        <Card.Header title={name}>{name.slice(0, 70)}...</Card.Header>
+      </Card.Content>
+      <Card.Content>
+        <Card.Meta>${price}</Card.Meta>
+        <Card.Description>{desc.slice(0, 50)}...</Card.Description>
       </Card.Content>
     </Card>
   );

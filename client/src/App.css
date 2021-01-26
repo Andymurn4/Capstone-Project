@@ -10,3 +10,11 @@ main {
 .center {
   text-align: center !important;
 }
+.product-card {
+  margin-bottom: 15px !important;
+}
+
+.product-img {
+  height: 175px !important;
+  width: auto !important;
+}

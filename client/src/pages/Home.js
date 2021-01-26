@@ -18,20 +18,26 @@ function Home() {
 
   return (
     <div>
-      <Grid columns={3}>
+      <Grid verticalAlign="middle" columns={3}>
         <Grid.Row className="page-title">
           <h1>Recent Listings</h1>
         </Grid.Row>
         <Grid.Row>
-          <Grid.Column>
+          {loading ? (
+            <h2>loading...</h2>
+          ) : error ? (
+            <h2>{error}</h2>
+          ) : (
+            products.map((product) => (
+              <Grid.Column key={product._id} className="product-card">
+                <ProductCard product={product} />
+              </Grid.Column>
+            ))
+          )}
+
+          {/* <Grid.Column>
             <ProductCard />
-          </Grid.Column>
-          <Grid.Column>
-            <ProductCard />
-          </Grid.Column>
-          <Grid.Column>
-            <ProductCard />
-          </Grid.Column>
+          </Grid.Column> */}
         </Grid.Row>
       </Grid>
     </div>
