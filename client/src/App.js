@@ -12,6 +12,7 @@ import Cart from "./pages/Cart";
 import Register from "./pages/Register";
 import Product from "./pages/Product";
 import PostListing from "./pages/PostListing";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/register" component={Register} />
         <Route exact path="/product/:id" component={Product} />
         <Route exact path="/listing/" component={PostListing} />
+        <Route exact path="/about" component={About} />
       </Container>
     </Router>
   );

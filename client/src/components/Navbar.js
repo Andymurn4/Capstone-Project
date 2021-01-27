@@ -16,6 +16,13 @@ function Navbar() {
         as={Link}
         to="/"
       />
+      <Menu.Item
+        name="about"
+        active={activeItem === "about"}
+        onClick={handleItemClick}
+        as={Link}
+        to="/about"
+      />
 
       <Menu.Menu position="right">
         <Menu.Item
@@ -48,6 +55,13 @@ export default Navbar;
         onClick={handleItemClick}
         as={Link}
         to="/"
+      />
+      <Menu.Item
+        name="about"
+        active={activeItem === "about"}
+        onClick={handleItemClick}
+        as={Link}
+        to="/about"
       />
 
       <Menu.Menu position="right">   
