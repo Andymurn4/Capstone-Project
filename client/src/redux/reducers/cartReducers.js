@@ -1,6 +1,10 @@
 import * as actionTypes from "../typeDefs/cartConstants";
 
-export const cartReducer = (state = { cartItems: [] }, action) => {
+const CART_INITIAL_STATE = {
+  cartItems: [],
+};
+
+export const cartReducer = (state = CART_INITIAL_STATE, action) => {
   switch (action.type) {
     case actionTypes.ADD_TO_CART:
       const item = action.payload;
@@ -15,7 +19,7 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
       } else {
         return {
           ...state,
-          cartItems: { ...state.cartItems, item },
+          cartItems: [...state.cartItems, item],
         };
       }
     case actionTypes.REMOVE_FROM_CART:
