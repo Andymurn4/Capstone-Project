@@ -16,7 +16,7 @@ const register = (req, res, next) => {
             password: hashedPass
         })
         user.save()
-        .then(usser => {
+        .then(user => {
             res.json({
                 message: 'User Added Successfully'
             })
