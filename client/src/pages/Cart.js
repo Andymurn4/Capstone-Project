@@ -3,8 +3,6 @@ import { Grid, Image, Card, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
-import CartCard from "../components/CartCard";
-
 import { removeFromCart } from "../redux/actions/cartActions";
 
 function Cart() {
