@@ -18,3 +18,12 @@ main {
   height: 175px !important;
   width: auto !important;
 }
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.my-5 {
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+}
