@@ -1,10 +1,12 @@
 import React from "react";
 import { Grid, Image, Card, Button } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 function Product() {
   const description = [
     "Amy is a violinist with 2 years experience in the wedding industry.",
     "She enjoys the outdoors and currently resides in upstate New York.",
   ];
+
   return (
     <div>
       <h1>Product Page</h1>
