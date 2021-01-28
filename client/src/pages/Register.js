@@ -1,37 +1,49 @@
-import React, { useContext, useState } from "react";
+import React, { useEffect } from "react";
 import { Form, Button } from "semantic-ui-react";
+import { useDispatch, useSelector } from "react-redux";
+import { setUsername, setPassword, getUser, setEmail, registerUser } from "../redux/actions/userActions";
+import axios from 'axios';
+
 
 function Register() {
+
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user);
+  
+
+  useEffect(()=>{
+    dispatch(getUser())
+  },[dispatch])
+
+
   return (
+    console.log(user.user),
     <div>
       <h1>Register Page</h1>
-      <Form>
+      <Form onSubmit={registerUser(user.user.username,user.user.email,user.user.password)}>
         <Form.Input
           label="Username"
           placeholder="Username"
           name="username"
           type="text"
-          //   value={values.username}
-          //   error={errors.username ? true : false}
-          //   onChange={onChange}
+          value={user.username}
+          onChange={(e) => dispatch(setUsername(e.target.value))}
         />
         <Form.Input
           label="Email"
           placeholder="Email"
           name="email"
           type="email"
-          //   value={values.email}
-          //   error={errors.email ? true : false}
-          //   onChange={onChange}
+          value={user.email}
+          onChange={(e) => dispatch(setEmail(e.target.value))}
         />
         <Form.Input
           label="Password"
           placeholder="Password"
           name="password"
           type="password"
-          //   value={values.password}
-          //   error={errors.password ? true : false}
-          //   onChange={onChange}
+          value={user.password}
+          onChange={(e) => dispatch(setPassword(e.target.value))}
         />
         <Form.Input
           label="Confirm Password"
