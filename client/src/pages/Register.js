@@ -5,19 +5,20 @@ import { setUsername, setPassword, getUser, setEmail, registerUser } from "../re
 import axios from 'axios';
 
 
+
+
 function Register() {
 
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
   
-
   useEffect(()=>{
     dispatch(getUser())
   },[dispatch])
 
+ 
 
   return (
-    console.log(user.user),
     <div>
       <h1>Register Page</h1>
       <Form onSubmit={registerUser(user.user.username,user.user.email,user.user.password)}>

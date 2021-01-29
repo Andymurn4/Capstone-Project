@@ -25,6 +25,15 @@ export const registerUser = (username,email,password) => async (dispatch) => {
     }
 }
 
+export const loginUser = (username, password) => async (dispatch) => {
+    try {
+        const { data } = await axios.post("http://localhost:5000/api/login", { username, password })
+        localStorage.setItem("token",data);
+    } catch (err) {
+        console.error(err);
+    }
+}
+
 export const setUsername = (username) => (dispatch) => {
     dispatch({
         type: actionTypes.SET_USERNAME,
