@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Grid, Image, Card, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+
 import { removeFromCart } from "../redux/actions/cartActions";
 
 function Cart() {
